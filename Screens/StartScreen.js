@@ -8,15 +8,12 @@ const StartScreen = () => {
         <Image source={require("../assets/Images/HappyUsers.png")} />
         <Image source={require("../assets/Images/Colorful.png")} />
         <View style={styles.welcomeContainer}>
-          <Text
-            style={[
-              styles.welcomeText,
-              { fontWeight: "bold", color: "#1f3455" },
-            ]}
-          >
+          <Text style={[styles.welcomeText, styles.welcomeTitle]}>
             Welcome to Fiber!
           </Text>
-          <Text style={[styles.welcomeText, { color: "#4c5d77" }]}>
+          <Text
+            style={[styles.welcomeText, { color: "#4c5d77", fontSize: 16 }]}
+          >
             Reach your goals faster with the all-in-one macro tracker.
           </Text>
         </View>
@@ -41,6 +38,10 @@ const styles = StyleSheet.create({
   welcomeText: {
     fontFamily: "Poppins-Regular",
     textAlign: "center",
-    fontSize: 16,
+  },
+  welcomeTitle: {
+    fontFamily: "Poppins-SemiBold",
+    color: "#1f3455",
+    fontSize: 24,
   },
 });

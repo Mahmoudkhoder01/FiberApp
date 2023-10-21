@@ -2,10 +2,15 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import StartScreen from "./Screens/StartScreen";
 import { useFonts } from "expo-font";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
+  const Stack = createStackNavigator();
+
   const [fontsLoaded] = useFonts({
     "Poppins-Regular": require("./assets/Fonts/Poppins-Regular.ttf"),
+    "Poppins-SemiBold": require("./assets/Fonts/Poppins-SemiBold.ttf")
   });
 
   if (!fontsLoaded) {
@@ -14,8 +19,15 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
-      <StartScreen />
+      <StatusBar style="dark" />
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Start"
+          screenOptions={{ headerShown: false }}
+        >
+          <Stack.Screen name="Start" component={StartScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </View>
   );
 }

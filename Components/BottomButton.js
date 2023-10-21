@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontWeight: "bold",
+    fontFamily: "Poppins-SemiBold",
+    fontSize: 16
   },
   buttonPressed: {
     opacity: 0.7,
