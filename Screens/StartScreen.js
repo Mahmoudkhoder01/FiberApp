@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 40,
   },
   welcomeText: {
-    fontFamily: "Inter-Regular",
+    fontFamily: "Poppins-Regular",
     textAlign: "center",
     fontSize: 16,
   },

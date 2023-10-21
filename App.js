@@ -5,7 +5,7 @@ import { useFonts } from "expo-font";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    "Inter-Regular": require("./assets/Fonts/Inter-Regular.ttf"),
+    "Poppins-Regular": require("./assets/Fonts/Poppins-Regular.ttf"),
   });
 
   if (!fontsLoaded) {
