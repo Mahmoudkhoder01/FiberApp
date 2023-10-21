@@ -4,10 +4,10 @@
     "slug": "FiberApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/FiberSplash.png",
+    "icon": "./assets/FiberIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/FiberIcon.png",
+      "image": "./assets/FiberSplash.png",
       "resizeMode": "contain",
       "backgroundColor": "#F8F6F7"
     },
@@ -17,8 +17,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/FiberIcon.png",
+        "backgroundColor": "#F8F6F7"
       }
     },
     "web": {
