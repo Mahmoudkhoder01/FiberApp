@@ -4,13 +4,14 @@ import StartScreen from "./Screens/StartScreen";
 import { useFonts } from "expo-font";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import OnBoardingScreen from "./Screens/OnBoardingScreen";
 
 export default function App() {
   const Stack = createStackNavigator();
 
   const [fontsLoaded] = useFonts({
     "Poppins-Regular": require("./assets/Fonts/Poppins-Regular.ttf"),
-    "Poppins-SemiBold": require("./assets/Fonts/Poppins-SemiBold.ttf")
+    "Poppins-SemiBold": require("./assets/Fonts/Poppins-SemiBold.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -26,6 +27,7 @@ export default function App() {
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Start" component={StartScreen} />
+          <Stack.Screen name="OnBoarding" component={OnBoardingScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

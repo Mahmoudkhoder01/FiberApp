@@ -1,7 +1,8 @@
 import { View, Text, Image, StyleSheet } from "react-native";
-import BottomButton from "../Components/BottomButton";
+import BottomButton from "../Components/ReusabeTools/OnBoarding/BottomButton";
+import { fonts } from "../Components/ReusabeTools/Font";
 
-const StartScreen = () => {
+const StartScreen = ({ navigation }) => {
   return (
     <>
       <View style={styles.container}>
@@ -18,7 +19,10 @@ const StartScreen = () => {
           </Text>
         </View>
       </View>
-      <BottomButton text={"Get started for free"} />
+      <BottomButton
+        text={"Get started for free"}
+        onPress={() => navigation.navigate("OnBoarding")}
+      />
     </>
   );
 };
@@ -36,11 +40,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 40,
   },
   welcomeText: {
-    fontFamily: "Poppins-Regular",
+    fontFamily: fonts.Regular,
     textAlign: "center",
   },
   welcomeTitle: {
-    fontFamily: "Poppins-SemiBold",
+    fontFamily: fonts.SemiBold,
     color: "#1f3455",
     fontSize: 24,
   },
