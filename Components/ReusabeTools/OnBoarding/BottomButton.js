@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Pressable, Platform } from "react-native";
-import { fonts } from "../Font";
+import { fonts } from "../CssTools";
 
 const BottomButton = ({ text, onPress }) => {
   return (
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontFamily: fonts.SemiBold,
+    fontFamily: fonts.semiBold,
     fontSize: 16,
   },
   buttonPressed: {

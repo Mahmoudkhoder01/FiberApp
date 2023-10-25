@@ -7,6 +7,7 @@ import {
   Easing,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { colors } from "../ReusabeTools/CssTools";
 
 const ArrowLine = ({ lineWidth, onPress }) => {
   const animatedLineWidth = useRef(new Animated.Value(lineWidth)).current;
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   onBoardLine: {
-    backgroundColor: "#1F3455",
+    backgroundColor: colors.primary,
     borderRadius: 10,
     height: 6,
   },

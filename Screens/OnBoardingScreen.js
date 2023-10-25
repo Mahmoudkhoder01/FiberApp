@@ -17,6 +17,8 @@ const OnBoardingScreen = ({ navigation }) => {
     }
   };
 
+  const animationDuration = 1000;
+
   return (
     <>
       <ArrowLine
@@ -28,7 +30,7 @@ const OnBoardingScreen = ({ navigation }) => {
       {currentBoard === "join" && (
         <Animatable.View
           animation="slideInLeft"
-          duration={500}
+          duration={animationDuration}
           style={{ flex: 1 }}
         >
           <Join
@@ -41,7 +43,7 @@ const OnBoardingScreen = ({ navigation }) => {
       {currentBoard === "achieve" && (
         <Animatable.View
           animation="slideInRight"
-          duration={500}
+          duration={animationDuration}
           style={{ flex: 1 }}
         >
           <Achieve />

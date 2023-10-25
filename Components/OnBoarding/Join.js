@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import BottomButton from "../ReusabeTools/OnBoarding/BottomButton";
-import { fonts } from "../ReusabeTools/Font";
+import { colors, fonts } from "../ReusabeTools/CssTools";
 
 const Join = ({ lineWidth, setLineWidth, setCurrentBoard }) => {
   const nextBoard = () => {
@@ -55,15 +55,15 @@ const styles = StyleSheet.create({
     fontSize: 48,
   },
   gladTitle: {
-    fontFamily: fonts.SemiBold,
-    color: "#1f3455",
+    fontFamily: fonts.semiBold,
+    color: colors.primary,
     fontSize: 24,
     textAlign: "center",
   },
   gladText: {
-    fontFamily: fonts.Regular,
+    fontFamily: fonts.regular,
     textAlign: "center",
-    color: "#4c5d77",
+    color: colors.secondary,
     margin: 25,
     fontSize: 15,
   },
@@ -74,6 +74,6 @@ const styles = StyleSheet.create({
   },
   shield: {
     color: "#5d6b83",
-    fontFamily: fonts.Regular,
+    fontFamily: fonts.regular,
   },
 });

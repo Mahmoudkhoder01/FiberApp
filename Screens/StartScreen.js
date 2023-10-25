@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import BottomButton from "../Components/ReusabeTools/OnBoarding/BottomButton";
-import { fonts } from "../Components/ReusabeTools/Font";
+import { colors, fonts } from "../Components/ReusabeTools/CssTools";
 
 const StartScreen = ({ navigation }) => {
   return (
@@ -13,7 +13,10 @@ const StartScreen = ({ navigation }) => {
             Welcome to Fiber!
           </Text>
           <Text
-            style={[styles.welcomeText, { color: "#4c5d77", fontSize: 16 }]}
+            style={[
+              styles.welcomeText,
+              { color: colors.secondary, fontSize: 16 },
+            ]}
           >
             Reach your goals faster with the all-in-one macro tracker.
           </Text>
@@ -40,12 +43,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 40,
   },
   welcomeText: {
-    fontFamily: fonts.Regular,
+    fontFamily: fonts.regular,
     textAlign: "center",
   },
   welcomeTitle: {
-    fontFamily: fonts.SemiBold,
-    color: "#1f3455",
+    fontFamily: fonts.semiBold,
+    color: colors.primary,
     fontSize: 24,
   },
 });
