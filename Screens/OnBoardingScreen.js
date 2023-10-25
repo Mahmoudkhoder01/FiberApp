@@ -4,6 +4,7 @@ import ArrowLine from "../Components/OnBoarding/ArrowLIne";
 import Join from "../Components/OnBoarding/Join";
 import Achieve from "../Components/OnBoarding/Achieve";
 import * as Animatable from "react-native-animatable";
+import Gender from "../Components/OnBoarding/Gender";
 
 const OnBoardingScreen = ({ navigation }) => {
   const [lineWidth, setLineWidth] = useState(28.5);
@@ -12,12 +13,14 @@ const OnBoardingScreen = ({ navigation }) => {
   const handleChangeBoard = () => {
     if (currentBoard === "join") {
       navigation.navigate("Start");
-    } else {
+    } else if (currentBoard === "achieve") {
       setCurrentBoard("join");
+    } else if (currentBoard === "gender") {
+      setCurrentBoard("achieve");
     }
   };
 
-  const animationDuration = 1000;
+  const animationDuration = 800;
 
   return (
     <>
@@ -46,7 +49,20 @@ const OnBoardingScreen = ({ navigation }) => {
           duration={animationDuration}
           style={{ flex: 1 }}
         >
-          <Achieve />
+          <Achieve
+            lineWidth={lineWidth}
+            setCurrentBoard={setCurrentBoard}
+            setLineWidth={setLineWidth}
+          />
+        </Animatable.View>
+      )}
+      {currentBoard === "gender" && (
+        <Animatable.View
+          animation="slideInRight"
+          duration={animationDuration}
+          style={{ flex: 1 }}
+        >
+          <Gender />
         </Animatable.View>
       )}
     </>

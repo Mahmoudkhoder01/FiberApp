@@ -21,13 +21,21 @@ const achieveOptions = [
   },
 ];
 
-const Achieve = () => {
+const Achieve = ({ lineWidth, setCurrentBoard, setLineWidth }) => {
   const [selectedFieldId, setSelectedFieldId] = useState(null);
   const [isDisabled, setIsDisabled] = useState(false);
 
   const nextBoard = (fieldId) => {
     setSelectedFieldId(fieldId);
     setIsDisabled(true);
+
+    // Introduce a 0.15-second delay before moving to the "gender" board
+    setTimeout(() => {
+      if (lineWidth === 57) {
+        setLineWidth((l) => l + 28.5);
+      }
+      setCurrentBoard("gender");
+    }, 500); // 150 milliseconds
   };
 
   return (
